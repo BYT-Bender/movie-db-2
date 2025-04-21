@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import Navbar from '../components/Navbar';
 // import './Watchlist.css';
 
-const API_KEY = process.env.REACT_APP_API_KEY;
+const API_KEY = "3aec63790d50f3b9fc2efb4c15a8cf99";
 
 function Watchlist() {
     const [watchlist, setWatchlist] = useState([]);
