@@ -11,7 +11,7 @@ function App() {
         <Router>
             {/* <Navbar /> */}
             <Routes>
-                <Route path="/" element={<MovieList />} />
+                <Route path="/" element={<Home />} />
                 <Route path="/movies" element={<MovieList />} />
                 <Route path="/movie/:id" element={<MovieDetail />} />
                 <Route path="/watchlist" element={<Watchlist />} />
