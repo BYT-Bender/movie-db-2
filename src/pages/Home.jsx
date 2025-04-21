@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import logo from '../assets/images/logo.png';
 import './Home.css';
 
@@ -92,7 +93,7 @@ function Home() {
                     <img src={logo} alt="Watch Wise Logo" />
                     <span>WATCH WISE</span>
                 </div>
-                <a href="/movies">
+                <Link to="/movies">
                     <button className="explore-btn">
                         <span className="icon-wrapper">
                             <svg viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg" className="icon-svg" width="10">
@@ -104,7 +105,7 @@ function Home() {
                         </span>
                         <span>Explore All</span>
                     </button>
-                </a>
+                </Link>
             </main>
             <footer className='home-footer'>
                 <span>Copyright © 2025 BYT-Bender, All rights reserved</span>
