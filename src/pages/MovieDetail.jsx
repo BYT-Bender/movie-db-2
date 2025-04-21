@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 // import Footer from '../components/Footer';
 
-const API_KEY = process.env.REACT_APP_API_KEY;
+const API_KEY = "3aec63790d50f3b9fc2efb4c15a8cf99";
 
 function MovieDetail() {
     const { id } = useParams();
