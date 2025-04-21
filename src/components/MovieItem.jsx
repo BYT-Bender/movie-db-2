@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 function MovieItem({ movie, onWatchlistChange }) {
     const [isInWatchlist, setIsInWatchlist] = useState(false);
@@ -24,17 +25,12 @@ function MovieItem({ movie, onWatchlistChange }) {
         if (onWatchlistChange) onWatchlistChange(updatedWatchlist);
     };
 
-    const handleClick = () => {
-        window.location.href = `/movie/${movie.id}`;
-    };
-
     const getStarRating = (vote) => {
         const ratingOutOf5 = vote / 2;
         const filledStars = Math.floor(ratingOutOf5);
         const halfFilledStars = ratingOutOf5 % 1 > 0.5 ? 1 : 0;
         const emptyStars = 5 - filledStars - halfFilledStars;
-        
-    
+
         const stars = [];
 
         for (let i = 0; i < filledStars; i++) {
@@ -58,14 +54,14 @@ function MovieItem({ movie, onWatchlistChange }) {
                 </svg>
             );
         }
-    
+
         return stars;
     };
 
     return (
-        <div className="item" onClick={handleClick} data-id={movie.id}>
+        <Link to={`/movie/${movie.id}`} className="item" data-id={movie.id}>
             <div className="content-effect">
-                <button className={`add-to-watchlist ${isInWatchlist ? 'active' : ''}`} onClick={toggleWatchlist}>
+                <button className={`add-to-watchlist ${isInWatchlist ? 'active' : ''}`} onClick={(e) => { e.stopPropagation(); toggleWatchlist(e); }}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-bookmark-fill" viewBox="0 0 16 16">
                         <path d="M2 2v13.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2" />
                     </svg>
@@ -87,7 +83,7 @@ function MovieItem({ movie, onWatchlistChange }) {
                     <div className="rating">{getStarRating(movie.vote_average)}</div>
                 </div>
             </div>
-        </div>
+        </Link>
     );
 }
 
