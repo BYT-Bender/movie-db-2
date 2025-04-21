@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import logo from '../assets/images/logo.png';
 
-const API_KEY = process.env.REACT_APP_API_KEY;
+const API_KEY = "3aec63790d50f3b9fc2efb4c15a8cf99";
 
 const genres = {
   "28": "Action",
