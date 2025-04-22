@@ -46,6 +46,8 @@ Watch Wise is a React-based movie database application that allows users to expl
 
 ![Watchlist](https://github.com/user-attachments/assets/cfd587b3-0ed7-4443-87b0-325e7146e622)
 
+![Movie Details](https://github.com/user-attachments/assets/586b174b-a80c-4c99-a89f-b3ffe87bfdc2)
+
 ---
 
 © 2025 BYT-Bender. All rights reserved.
